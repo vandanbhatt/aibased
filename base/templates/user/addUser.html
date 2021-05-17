@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+    <title>Medi point</title>
+    <meta content="Admin Dashboard" name="description">
+    <meta content="themesdesign" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../../static/adminResources/image/favicon.ico">
+    <link href="../../static/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/adminResources/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../../static/adminResources/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="../../static/adminResources/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body><!-- Begin page --><!--<div class="accountbg"></div>-->
+<div id="stars"></div>
+<div id="stars2"></div>
+<div class="container">
+    <div class="myform">
+        <div class="card-body"><h3 class="text-center mt-0"><a class="logo logo-admin"><img
+                src="../../static/adminResources/image/logo.jpg" height="45" width="200" alt="logo"></a></h3>
+        </div>
+        <form action="/admin/insert_user" method="post" class="form-element" enctype="multipart/form-data">
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="col-12"><input class="form-control" type="text" placeholder="First name"
+                                               name="userFirstname"
+                                               onkeypress='return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122'>
+                    </div>
+                </div>
+
+                <div class="form-group  col-6">
+                    <div class="col-12"><input class="form-control" type="text" placeholder="Last name"
+                                               name="userLastname"
+                                               onkeypress='return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122'>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="col-12"><input class="form-control" type="text" placeholder="Age" name="userAge"
+                                               onkeypress='return event.charCode>=48 && event.charCode<=57'>
+                    </div>
+                </div>
+
+                <div class="form-group col-6">
+                    <div class="col-12"><input data-parsley-type="digits" class="form-control" type="text"
+                                               placeholder="Phone Number"
+                                               name="userPhonenumber"
+                                               onkeypress='return event.charCode>=48 && event.charCode<=57'>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="col-12"><input class="form-control" type="email" parsley-type="email"
+                                               placeholder="Email" name="userEmail">
+                    </div>
+                </div>
+
+
+                <div class="form-group col-6">
+                    <div class="col-12"><input class="form-control" type="text" placeholder="Address"
+                                               name="userAddress">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <label><b>Gender</b></label>
+            <br>
+            <div class="row">
+
+                <div class="form-check-inline-user">
+
+                    <div class="form-group col-2">
+
+                        <div class="form-check-inline my-2">
+                            <div class="cust om-control custom-radio">
+                                <input type="radio" id="customRadio1"
+                                       name="userGender" value="male"
+                                       class="custom-control-input">
+                                <label class="custom-control-label"
+                                       for="customRadio1">Male</label></div>
+                        </div>
+                    </div>
+                    <div class="form-group col-3">
+                        <div class="form-check-inline my-1">
+                            <div class="custom-control custom-radio"><input type="radio" id="customRadio6"
+                                                                            name="userGender" value="female"
+                                                                            class="custom-control-input"> <label
+                                    class="custom-control-label" for="customRadio6">Female</label></div>
+                        </div>
+                    </div>
+                    <div class="form-group col-3">
+                        <div class="form-check-inline my-1">
+                            <div class="custom-control custom-radio"><input type="radio" id="customRadio5"
+                                                                            name="userGender" value="others"
+                                                                            class="custom-control-input"> <label
+                                    class="custom-control-label" for="customRadio5">Others</label></div>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                    <div class="form-group col-6">
+                        <label><b>Conditions</b></label>
+                        <br>
+                        <div class="checkbox my-1">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2"
+                                       data-parsley-multiple="groups" value="Ostereoporosis (weakbone)"
+                                       name="userConditions">
+                                <label class="custom-control-label" for="customCheck2">Ostereoporosis (weakbone)</label>
+                            </div>
+                        </div>
+                        <div class="checkbox my-1">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3"
+                                       data-parsley-multiple="groups" value="Gain in weight (heavyweight)"
+                                       name="userConditions">
+                                <label class="custom-control-label" for="customCheck3">Gain in weight
+                                    (heavyweight)</label>
+                            </div>
+                        </div>
+                        <div class="checkbox my-1">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4"
+                                       data-parsley-multiple="groups" value="Diabetes" name="userConditions">
+                                <label class="custom-control-label" for="customCheck4">Diabetes</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label><b>Pain Level</b></label>&nbsp;
+            <br>
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="form-check-inline my-1">
+                        <div class="custom-control custom-radio">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="customRadio7" name="userPainlevel"
+                                   class="custom-control-input" value="Less">
+                            <label class="custom-control-label" for="customRadio7">Less</label>
+                        </div>
+                    </div>
+                    <div class="form-check-inline my-1">
+                        <div class="custom-control custom-radio"><input type="radio" id="customRadio8"
+                                                                        name="userPainlevel"
+                                                                        class="custom-control-input" value="Normal">
+                            <label
+                                    class="custom-control-label" for="customRadio8">Normal</label></div>
+                    </div>
+                    <div class="form-check-inline my-1">
+                        <div class="custom-control custom-radio"><input type="radio" id="customRadio9"
+                                                                        name="userPainlevel"
+                                                                        class="custom-control-input" value="High">
+                            <label
+                                    class="custom-control-label" for="customRadio9">High</label></div>
+                    </div>
+                </div>
+
+                <div class="form-group col-6">
+                    <label><b>Blood Group</b></label>
+                    <div class="col-sm-10"><select class="form-control" name="userBloodgroup">
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="controls" class="col-12">
+                        <label><b>Upload Report</b></label>
+                        <input type="file" name="userReport" class="form-control"
+                               accept="image/jpg, image/jpeg, image/png" required
+                               data-validation-required-message="This field is required">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group text-center row m-t-20">
+                <div class="col-12">
+                    <button class="btn btn-danger btn-block waves-effect waves-light" type="submit">Register
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="form-group m-t-10 mb-0 row">
+            <div class="col-12 m-t-20 text-center">
+                Already
+                have account?
+                <a href="/" class="text-muted">Login</a>
+            </div>
+        </div>
+    </div>
+</div><!-- jQuery  -->
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/popper.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/detect.js"></script>
+<script src="../../static/adminResources/js/fastclick.js"></script>
+<script src="../../static/adminResources/js/jquery.slimscroll.js"></script>
+<script src="../../static/adminResources/js/jquery.blockUI.js"></script>
+<script src="../../static/adminResources/js/waves.js"></script>
+<script src="../../static/adminResources/js/jquery.toast.min.js"></script>
+<script src="../../static/adminResources/js/toaster.js"></script>
+<script src="../../static/adminResources/js/jquery.nicescroll.js"></script>
+<script src="../../static/adminResources/js/jquery.scrollTo.min.js"></script><!-- App js -->
+<script src="../../static/adminResources/js/app.js"></script>
+</body>
+</html>
